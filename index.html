@@ -243,7 +243,11 @@
         }
 
         .table-container {
-            overflow-x: auto;
+            max-height: 800px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    overflow-y: auto; 
         }
 
         table {
@@ -273,10 +277,12 @@
         }
         .EFFEC {
             display: flex;
-            background-color: #08e43f;
+            background-color: rgb(0, 121, 107);
             border-radius: 5px;
-            padding: 2.5px;
+            padding: 8px;
             margin: 2px;
+            color: #ccc;
+            font-weight: 600;
 
            
         }
@@ -1126,6 +1132,8 @@
                                         <th>DATE</th>
                                         <th>FINCA</th>
                                         <th>SITUATION</th>
+                                        <th>S CONTRAT</th>
+                                        <th>CONTRAT</th>
                                         
                                     </tr>
                                 </thead>
