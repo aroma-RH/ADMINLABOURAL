@@ -1025,7 +1025,7 @@
                     <div id="missing-names-modal" class="modal">
                         <div class="modal-content" >
                             <span class="close-btn">&times;</span>
-                            <h3>Liste non pointes</h3>
+                            <h3>Liste Manque de Contrat </h3>
                             <ul id="missing-names-list"></ul>
                         </div>
                     </div>
@@ -1586,7 +1586,7 @@ function searchTableeffectif1() {
     if (names.length > 0) {
         names.forEach(nameObj => {
             let li = document.createElement('li');
-            li.textContent = `${nameObj.code} ${nameObj.name} >> ${nameObj.finca}`;
+            li.textContent = `${nameObj.code} ${nameObj.name} >>  ${nameObj.CONTRAT} :  ${nameObj.finca}`;
             namesList.appendChild(li);
         });
     } else {
