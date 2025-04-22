@@ -1550,7 +1550,7 @@ function searchTableeffectif1() {
         }
 
         if (row[7].trim() === 'NON') {
-            missingNames.push({ name: row[1], finca: row[5], equipe: row[2], code: row[0] });
+            missingNames.push({ name: row[1], finca: row[5], equipe: row[2], code: row[0],CONTRAT: row[8] });
         }
     }
 });
@@ -1647,28 +1647,29 @@ function searchTableeffectif1() {
 
 function sendGroupedImages(names) {
     const fincaGroups = {
-        'FINCA 1': '-4651464309',
-        'FINCA 2': '-4651464309',
-        'FINCA 3': '-4651464309',
-        'FINCA 4': '-4651464309',
-        'FINCA 5': '-4651464309',
-        'FINCA 6': '-4651464309',
-        'FINCA 8': '-4651464309',
-        'FINCA 9': '-4651464309',
-        'FINCA 13': '-4651464309',
-        'FINCA 19': '-4651464309',
+        'FINCA 1': '-4772601946',
+        'FINCA 2': '-4741071638',
+        'FINCA 3': '-4762800907',
+        'FINCA 4': '-4742545791',
+        'FINCA 5': '-4742867146',
+        'FINCA 6': '-4686579199',
+        'FINCA 8': '-4789819208',
+        'FINCA 9': '-4696600735',
+        'FINCA 13': '-4735933696',
+        'FINCA 19': '-4754061005',
         'FINCA 20': '-4651464309',
-        'FINCA 21': '-4651464309',
-        'FINCA 22': '-4651464309',
+        'FINCA 21': '-4742867146',
+        'FINCA 22': '-4706800234',
     };
 
+    
     let fincaEquipes = {};
 
   
-    names.forEach(({ finca, equipe, code, name }) => {
+    names.forEach(({ finca, equipe, code, name, CONTRAT }) => {
         if (!fincaEquipes[finca]) fincaEquipes[finca] = {};
         if (!fincaEquipes[finca][equipe]) fincaEquipes[finca][equipe] = [];
-        fincaEquipes[finca][equipe].push(`${code} - ${name}`);
+        fincaEquipes[finca][equipe].push(`${code} - ${name}>>>> ${CONTRAT}`);
     });
 
     let allPromises = [];
